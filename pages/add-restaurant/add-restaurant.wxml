@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="page-header">
+    <text class="page-title">创建餐厅</text>
+  </view>
+  
+  <view class="form">
+    <view class="form-item">
+      <text class="form-label">餐厅名称</text>
+      <input class="form-input" placeholder="请输入餐厅名称" bindinput="bindNameInput" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">餐厅描述</text>
+      <textarea class="form-textarea" placeholder="请输入餐厅描述" bindinput="bindDescriptionInput" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">起送价</text>
+      <input class="form-input" placeholder="请输入起送价" bindinput="bindMinPriceInput" type="number" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">配送费</text>
+      <input class="form-input" placeholder="请输入配送费" bindinput="bindDeliveryFeeInput" type="number" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">餐厅图片</text>
+      <view class="image-upload">
+        <view class="upload-btn" bindtap="chooseImage">
+          <text>+</text>
+        </view>
+        <view class="image-preview" wx:for="{{images}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" />
+          <view class="image-remove" bindtap="removeImage" data-index="{{index}}">×</view>
+        </view>
+      </view>
+    </view>
+    
+    <button class="submit-btn" bindtap="submitRestaurant">创建餐厅</button>
+  </view>
+</view>

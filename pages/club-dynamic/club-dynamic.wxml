@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="club-header">
+    <text class="club-title">摄影社举办春季摄影展</text>
+    <text class="club-author">摄影社</text>
+    <text class="club-time">2026-03-10</text>
+  </view>
+  
+  <view class="club-content">
+    <image src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20club%20activity&image_size=square" mode="aspectFit" />
+    <text class="content">尊敬的同学们：
+
+摄影社将于本周末（3月15日-16日）在校园文化中心举办春季摄影展，展示社员们的优秀作品。
+
+本次摄影展主题为"春日校园"，收录了近百幅摄影作品，涵盖校园风光、人文纪实等多个类别。我们邀请了专业摄影师担任评委，评选出优秀作品并颁发奖项。
+
+欢迎广大师生前来参观，感受摄影的魅力，与我们一起记录校园的美好瞬间。
+
+活动时间：3月15日-16日 9:00-17:00
+活动地点：校园文化中心
+
+摄影社
+2026年3月10日</text>
+  </view>
+  
+  <view class="comments">
+    <text class="comments-title">留言</text>
+    <view class="comment">
+      <view class="comment-header">
+        <text class="comment-name">李四</text>
+        <text class="comment-time">2小时前</text>
+      </view>
+      <text class="comment-content">很棒的活动，一定会去参观！</text>
+    </view>
+    <view class="comment">
+      <view class="comment-header">
+        <text class="comment-name">王五</text>
+        <text class="comment-time">1小时前</text>
+      </view>
+      <text class="comment-content">期待看到大家的作品！</text>
+    </view>
+  </view>
+  
+  <view class="comment-input">
+    <input placeholder="写下你的留言..." class="input" />
+    <button class="send-btn">发送</button>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="user-info">
+    <view class="avatar" bindtap="chooseAvatar">
+      <image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" class="avatar-img"></image>
+      <text wx:else>点击设置头像</text>
+    </view>
+    <view class="info">
+      <view class="name-wrapper">
+        <input wx:if="{{isEditingName}}" class="name-input" value="{{editingName}}" bindinput="bindNameInput" placeholder="请输入账号名称" />
+        <text wx:else class="name">{{userInfo ? userInfo.account : '未登录'}}</text>
+        <text wx:if="{{userInfo && !isEditingName}}" class="edit-icon" bindtap="startEditName">✏️</text>
+      </view>
+      <text class="type">{{userTypeText}}</text>
+    </view>
+    <button wx:if="{{!userInfo}}" class="login-btn" bindtap="goToLogin">登录/注册</button>
+  </view>
+  
+  <view wx:if="{{isEditingName}}" class="edit-actions">
+    <button class="cancel-btn" bindtap="cancelEditName">取消</button>
+    <button class="save-btn" bindtap="saveName">保存</button>
+  </view>
+  
+  <view class="menu-section">
+    <view class="menu-item" bindtap="goToOrders">
+      <text class="menu-icon">📋</text>
+      <text class="menu-text">我的订单</text>
+      <text class="menu-arrow">→</text>
+    </view>
+    <view wx:if="{{userType != 2}}" class="menu-item" bindtap="goToAddresses">
+      <text class="menu-icon">📍</text>
+      <text class="menu-text">收货地址</text>
+      <text class="menu-arrow">→</text>
+    </view>
+    <view wx:if="{{userType == 2}}" class="menu-item" bindtap="goToMyShop">
+      <text class="menu-icon">🏪</text>
+      <text class="menu-text">我的店铺</text>
+      <text class="menu-arrow">→</text>
+    </view>
+  </view>
+  
+  <button wx:if="{{userInfo}}" class="logout-btn" bindtap="logout">退出登录</button>
+</view>

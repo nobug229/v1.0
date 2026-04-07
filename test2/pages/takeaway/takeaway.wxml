@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="nav-bar">
+    <view class="nav-item active">餐厅列表</view>
+  </view>
+  
+  <view class="search-bar">
+    <input placeholder="搜索餐厅" class="search-input" />
+    <button class="search-btn">搜索</button>
+  </view>
+  
+  <view class="restaurant-list">
+    <view class="restaurant-item" wx:for="{{restaurants}}" wx:key="id" bindtap="goToRestaurant" data-id="{{item.id}}">
+      <view class="restaurant-info">
+        <text class="restaurant-name">{{item.name}}</text>
+        <text class="restaurant-desc">{{item.description}}</text>
+        <view class="restaurant-tags">
+          <view class="tag tag-primary" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</view>
+        </view>
+        <view class="restaurant-footer">
+          <text class="price">起送价：¥{{item.minPrice}}</text>
+          <text class="rating">评分：{{item.rating}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{restaurants.length === 0}}" class="empty-tip">暂无餐厅数据</view>
+  </view>
+</view>

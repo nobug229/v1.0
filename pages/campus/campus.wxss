@@ -1,0 +1,111 @@
+.container {
+  padding: 0;
+  padding-bottom: 120rpx;
+}
+
+.announcement-list {
+  padding: 20rpx;
+}
+
+.announcement-item {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.announcement-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.announcement-time {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+  display: block;
+}
+
+.announcement-content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  display: block;
+}
+
+.club-list {
+  padding: 20rpx;
+}
+
+.club-item {
+  display: flex;
+  background-color: white;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.club-image {
+  width: 200rpx;
+  height: 200rpx;
+  object-fit: cover;
+}
+
+.club-info {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.club-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.club-author {
+  font-size: 24rpx;
+  color: #1a73e8;
+  margin-bottom: 5rpx;
+  display: block;
+}
+
+.club-time {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+  display: block;
+}
+
+.club-content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.post-btn {
+  position: fixed;
+  bottom: 100rpx;
+  right: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #1a73e8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}

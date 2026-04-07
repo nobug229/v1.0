@@ -1,0 +1,200 @@
+.container {
+  padding: 20rpx;
+}
+
+.merchant-header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.merchant-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.merchant-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.stat-item {
+  background-color: white;
+  border-radius: 15rpx;
+  padding: 30rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.merchant-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.action-item {
+  background-color: white;
+  border-radius: 15rpx;
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.action-item:hover {
+  transform: translateY(-5rpx);
+}
+
+.action-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.action-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.section {
+  background-color: white;
+  border-radius: 15rpx;
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.restaurant-list {
+  margin-top: 20rpx;
+}
+
+.restaurant-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.restaurant-item:last-child {
+  border-bottom: none;
+}
+
+.restaurant-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.restaurant-desc {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.restaurant-actions {
+  display: flex;
+  gap: 10rpx;
+}
+
+.action-btn {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  padding: 0;
+}
+
+.order-list {
+  margin-top: 20rpx;
+}
+
+.order-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: relative;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-id {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.order-time {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.order-amount {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ff4444;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.order-status {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+  color: #388e3c;
+  background-color: #e8f5e8;
+  padding: 5rpx 15rpx;
+  border-radius: 20rpx;
+}
+
+.order-status.accepted {
+  color: #1976d2;
+  background-color: #e3f2fd;
+}
+
+.accept-btn {
+  margin-top: 10rpx;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  padding: 0;
+}

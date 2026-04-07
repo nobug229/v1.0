@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="logo">
+    <text style="font-size: 48rpx; font-weight: bold; color: #1a73e8;">注册账号</text>
+  </view>
+  
+  <view class="form">
+    <input class="input" placeholder="请设置账号名称" bindinput="bindAccountInput" />
+    <input class="input" placeholder="请绑定手机号" type="number" bindinput="bindPhoneInput" />
+    <text class="default-password">密码默认为：123456</text>
+    
+    <view class="user-type">
+      <text style="font-size: 28rpx; margin-bottom: 10rpx; display: block;">选择账号类型（仅选一种）</text>
+      <view class="tag-select">
+        <view class="tag-item {{userType === 1 ? 'active' : ''}}" bindtap="selectUserType" data-type="1">
+          学生账号
+        </view>
+        <view class="tag-item {{userType === 2 ? 'active' : ''}}" bindtap="selectUserType" data-type="2">
+          商户账号
+        </view>
+        <view class="tag-item {{userType === 3 ? 'active' : ''}}" bindtap="selectUserType" data-type="3">
+          社团账号
+        </view>
+        <view class="tag-item {{userType === 4 ? 'active' : ''}}" bindtap="selectUserType" data-type="4">
+          管理员账号
+        </view>
+      </view>
+    </view>
+    
+    <text wx:if="{{!userType}}" class="error-text">请选择账号类型</text>
+    <button class="btn btn-primary" bindtap="register">注册</button>
+    <navigator class="login-link" url="/pages/login/login">
+      <text>已有账号？立即登录</text>
+    </navigator>
+  </view>
+</view>

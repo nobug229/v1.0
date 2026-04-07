@@ -1,0 +1,72 @@
+.container {
+  padding: 40rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.form {
+  width: 100%;
+}
+
+.user-type {
+  margin: 30rpx 0;
+}
+
+.type-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.type-item {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 25rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+
+.type-item.active {
+  border-color: #1a73e8;
+  background: #e8f0fe;
+}
+
+.type-circle {
+  width: 24rpx;
+  height: 24rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  background: #fff;
+}
+
+.type-item.active .type-circle {
+  border-color: #1a73e8;
+  background: #1a73e8;
+}
+
+.type-item text {
+  font-size: 28rpx;
+}
+
+.test-account {
+  margin: 20rpx 0;
+  text-align: center;
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #1a73e8;
+}

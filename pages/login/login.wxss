@@ -1,0 +1,46 @@
+.container {
+  padding: 40rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.form {
+  width: 100%;
+}
+
+.user-type {
+  margin: 30rpx 0;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.radio-item text {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #1a73e8;
+}

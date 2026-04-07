@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/takeaway/takeaway",
+    "pages/restaurant/restaurant",
+    "pages/order/order",
+    "pages/merchant/merchant",
+    "pages/add-restaurant/add-restaurant",
+    "pages/add-dish/add-dish",
+    "pages/second-hand/second-hand",
+    "pages/post/post",
+    "pages/post-detail/post-detail",
+    "pages/campus/campus",
+    "pages/announcement/announcement",
+    "pages/club-dynamic/club-dynamic",
+    "pages/profile/profile",
+    "pages/address/address",
+    "pages/address-edit/address-edit",
+    "pages/merchant-orders/merchant-orders",
+    "pages/my-shop/my-shop"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园服务",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/takeaway/takeaway",
+        "text": "校园美食"
+      },
+      {
+        "pagePath": "pages/campus/campus",
+        "text": "校园资讯"
+      },
+      {
+        "pagePath": "pages/second-hand/second-hand",
+        "text": "校园论坛"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人信息"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="page-header">
+    <text class="page-title">发布菜品</text>
+  </view>
+  
+  <view class="form">
+    <view class="form-item">
+      <text class="form-label">选择餐厅</text>
+      <picker bindchange="bindRestaurantChange" value="{{restaurantIndex}}" range="{{restaurants}}" range-key="name">
+        <view class="picker">
+          {{restaurants[restaurantIndex].name}}
+        </view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">菜品名称</text>
+      <input class="form-input" placeholder="请输入菜品名称" bindinput="bindNameInput" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">菜品描述</text>
+      <textarea class="form-textarea" placeholder="请输入菜品描述" bindinput="bindDescriptionInput" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">菜品价格</text>
+      <input class="form-input" placeholder="请输入菜品价格" bindinput="bindPriceInput" type="number" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">菜品图片</text>
+      <view class="image-upload">
+        <view class="upload-btn" bindtap="chooseImage">
+          <text>+</text>
+        </view>
+        <view class="image-preview" wx:for="{{images}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" />
+          <view class="image-remove" bindtap="removeImage" data-index="{{index}}">×</view>
+        </view>
+      </view>
+    </view>
+    
+    <button class="submit-btn" bindtap="submitDish">发布菜品</button>
+  </view>
+</view>

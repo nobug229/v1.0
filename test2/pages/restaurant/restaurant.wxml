@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="restaurant-header">
+    <view class="restaurant-info">
+      <text class="restaurant-name">炭火烧烤</text>
+      <text class="restaurant-desc">正宗炭火烧烤，美味可口</text>
+      <view class="restaurant-stats">
+        <text class="stat">评分：4.9</text>
+        <text class="stat">月售：78000</text>
+        <text class="stat">起送价：¥25</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="dish-list">
+    <view class="dish-card" wx:for="{{dishes}}" wx:key="id" wx:for-index="index" wx:for-item="dish">
+      <view class="dish-info">
+        <text class="dish-name">{{dish.name}}</text>
+        <text class="dish-desc">{{dish.description}}</text>
+        <text class="dish-price">¥{{dish.price}}</text>
+        <view class="count-selector">
+          <view class="count-btn" bindtap="decreaseCount" data-index="{{index}}">-</view>
+          <text class="count">{{dish.count}}</text>
+          <view class="count-btn" bindtap="increaseCount" data-index="{{index}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="bottom-bar">
+    <view class="cart-info">
+      <text class="cart-count">{{cartCount}}</text>
+      <text class="cart-text">购物车</text>
+    </view>
+    <view class="total-price">
+      <text>合计：</text>
+      <text class="price">¥{{totalPrice}}</text>
+    </view>
+    <button class="order-btn" bindtap="goToOrder">去结算</button>
+  </view>
+</view>

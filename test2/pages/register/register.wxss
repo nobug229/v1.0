@@ -1,0 +1,63 @@
+.container {
+  padding: 40rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.form {
+  width: 100%;
+}
+
+.user-type {
+  margin: 30rpx 0;
+}
+
+.tag-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+}
+
+.tag-item {
+  padding: 15rpx 30rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 25rpx;
+  font-size: 26rpx;
+  color: #666;
+  background-color: #fff;
+}
+
+.tag-item.active {
+  border-color: #1a73e8;
+  background-color: #1a73e8;
+  color: white;
+}
+
+.default-password {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.login-link {
+  display: block;
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #1a73e8;
+}

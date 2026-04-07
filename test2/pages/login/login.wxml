@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="logo">
+    <text style="font-size: 48rpx; font-weight: bold; color: #1a73e8;">校园服务</text>
+  </view>
+  
+  <view class="form">
+    <input class="input" placeholder="请输入账号" value="{{account}}" bindinput="bindAccountInput" />
+    <input class="input" placeholder="请输入密码" type="text" value="{{password}}" bindinput="bindPasswordInput" />
+    
+    <view class="user-type">
+      <text style="font-size: 28rpx; margin-bottom: 10rpx; display: block;">选择账号类型</text>
+      <view class="type-list">
+        <view class="type-item {{userType === 1 ? 'active' : ''}}" bindtap="selectUserType" data-type="1">
+          <view class="type-circle"></view>
+          <text>学生账号</text>
+        </view>
+        <view class="type-item {{userType === 2 ? 'active' : ''}}" bindtap="selectUserType" data-type="2">
+          <view class="type-circle"></view>
+          <text>商户账号</text>
+        </view>
+        <view class="type-item {{userType === 3 ? 'active' : ''}}" bindtap="selectUserType" data-type="3">
+          <view class="type-circle"></view>
+          <text>社团账号</text>
+        </view>
+        <view class="type-item {{userType === 4 ? 'active' : ''}}" bindtap="selectUserType" data-type="4">
+          <view class="type-circle"></view>
+          <text>管理员账号</text>
+        </view>
+      </view>
+    </view>
+    
+  
+
+    <button class="btn btn-primary" bindtap="login">登录</button>
+    <navigator class="register-link" url="/pages/register/register">
+      <text>还没有账号？立即注册</text>
+    </navigator>
+  </view>
+</view>

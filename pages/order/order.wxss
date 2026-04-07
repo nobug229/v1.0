@@ -1,0 +1,186 @@
+.container {
+  padding: 20rpx;
+  padding-bottom: 100rpx;
+}
+
+.section {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.address-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.address-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.address-info {
+  flex: 1;
+}
+
+.address-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 5rpx;
+  display: block;
+}
+
+.address-detail {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+
+.address-arrow {
+  font-size: 32rpx;
+  color: #999;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-name {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.order-count {
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.order-price {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-info {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.order-info:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.info-value {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.info-input {
+  flex: 1;
+  height: 60rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item.total {
+  margin-top: 10rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.price-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.price-value {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.price-value.total {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ff4444;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.total-price {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.total-price .price {
+  font-size: 32rpx;
+  color: #ff4444;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+
+.pay-btn {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  padding: 0;
+  margin-left: 20rpx;
+}

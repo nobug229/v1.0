@@ -1,0 +1,166 @@
+.container {
+  padding: 20rpx;
+  padding-bottom: 100rpx;
+}
+
+.payment-info {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 40rpx 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.payment-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.amount {
+  margin-top: 20rpx;
+}
+
+.amount-label {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.amount-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ff4444;
+  display: block;
+}
+
+.payment-methods {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  transition: background-color 0.3s ease;
+}
+
+.payment-item.active {
+  background-color: #e3f2fd;
+}
+
+.payment-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 5rpx;
+  display: block;
+}
+
+.payment-desc {
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+}
+
+.payment-check {
+  font-size: 32rpx;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+.order-details {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.detail-value {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+  text-align: right;
+  margin-left: 20rpx;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.total-price {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.total-price .price {
+  font-size: 32rpx;
+  color: #ff4444;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+
+.pay-btn {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  padding: 0;
+  margin-left: 20rpx;
+}

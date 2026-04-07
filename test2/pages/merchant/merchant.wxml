@@ -1,0 +1,74 @@
+<view class="container">
+  <view class="merchant-header">
+    <text class="merchant-title">商户管理</text>
+  </view>
+  
+  <view class="merchant-stats">
+    <view class="stat-item">
+      <text class="stat-value">3</text>
+      <text class="stat-label">餐厅数量</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">12</text>
+      <text class="stat-label">菜品数量</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">¥1234</text>
+      <text class="stat-label">今日收入</text>
+    </view>
+  </view>
+  
+  <view class="merchant-actions">
+    <navigator class="action-item" url="/pages/add-restaurant/add-restaurant">
+      <view class="action-icon">🏪</view>
+      <text class="action-text">创建餐厅</text>
+    </navigator>
+    <navigator class="action-item" url="/pages/add-dish/add-dish">
+      <view class="action-icon">🍽️</view>
+      <text class="action-text">发布菜品</text>
+    </navigator>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">我的餐厅</text>
+    <view class="restaurant-list">
+      <view class="restaurant-item">
+        <text class="restaurant-name">校园食堂</text>
+        <text class="restaurant-desc">提供各类美食，价格实惠</text>
+        <view class="restaurant-actions">
+          <button class="action-btn">编辑</button>
+          <button class="action-btn">查看</button>
+        </view>
+      </view>
+      <view class="restaurant-item">
+        <text class="restaurant-name">西式餐厅</text>
+        <text class="restaurant-desc">汉堡、披萨、意面等</text>
+        <view class="restaurant-actions">
+          <button class="action-btn">编辑</button>
+          <button class="action-btn">查看</button>
+        </view>
+      </view>
+      <view class="restaurant-item">
+        <text class="restaurant-name">中式餐厅</text>
+        <text class="restaurant-desc">正宗中餐，口味地道</text>
+        <view class="restaurant-actions">
+          <button class="action-btn">编辑</button>
+          <button class="action-btn">查看</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">最近订单</text>
+    <view class="order-list">
+      <view class="order-item" wx:for="{{orders}}" wx:key="id" wx:for-index="index">
+        <text class="order-id">订单号：{{item.orderNumber || item.id}}</text>
+        <text class="order-time">{{item.time}}</text>
+        <text class="order-amount">¥{{item.amount}}</text>
+        <text class="order-status {{item.status === '已接单' ? 'accepted' : ''}}">{{item.status}}</text>
+        <button wx:if="{{item.status === '待接单'}}" class="accept-btn" bindtap="acceptOrder" data-index="{{index}}">接单</button>
+      </view>
+    </view>
+  </view>
+</view>

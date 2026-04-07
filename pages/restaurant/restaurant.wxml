@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="restaurant-header">
+    <image src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=campus%20restaurant%20interior&image_size=square" mode="aspectFill" />
+    <view class="restaurant-info">
+      <text class="restaurant-name">校园食堂</text>
+      <text class="restaurant-desc">提供各类美食，价格实惠</text>
+      <view class="restaurant-stats">
+        <text class="stat">评分：4.8</text>
+        <text class="stat">月售：1234</text>
+        <text class="stat">起送价：¥15</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="nav-bar">
+    <view class="nav-item active">推荐</view>
+    <view class="nav-item">热销</view>
+    <view class="nav-item">主食</view>
+    <view class="nav-item">小吃</view>
+    <view class="nav-item">饮料</view>
+  </view>
+  
+  <view class="dish-list">
+    <view class="dish-card" wx:for="{{dishes}}" wx:key="id" wx:for-index="index" wx:for-item="dish">
+      <image class="dish-image" src="{{dish.image}}" mode="aspectFill" />
+      <view class="dish-info">
+        <text class="dish-name">{{dish.name}}</text>
+        <text class="dish-desc">{{dish.description}}</text>
+        <text class="dish-price">¥{{dish.price}}</text>
+        <view class="count-selector">
+          <view class="count-btn" bindtap="decreaseCount" data-index="{{index}}">-</view>
+          <text class="count">{{dish.count}}</text>
+          <view class="count-btn" bindtap="increaseCount" data-index="{{index}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="bottom-bar">
+    <view class="cart-info">
+      <text class="cart-count">{{cartCount}}</text>
+      <text class="cart-text">购物车</text>
+    </view>
+    <view class="total-price">
+      <text>合计：</text>
+      <text class="price">¥{{totalPrice}}</text>
+    </view>
+    <button class="order-btn" bindtap="goToOrder">去结算</button>
+  </view>
+</view>

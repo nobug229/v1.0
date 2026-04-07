@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left" bindtap="onBack">
+      <text class="back-btn">←</text>
+    </view>
+    <text class="header-title">{{id ? '修改地址' : '新增地址'}}</text>
+    <view class="header-right"></view>
+  </view>
+
+  <view class="form">
+    <view class="form-item">
+      <text class="label">联系人</text>
+      <view class="input-group">
+        <input class="input" placeholder="请输入联系人" value="{{name}}" bindinput="bindNameInput" />
+        <view class="gender-select">
+          <view class="gender-item {{gender === 'male' ? 'active' : ''}}" bindtap="selectGender" data-gender="male">
+            <view class="gender-circle {{gender === 'male' ? 'checked' : ''}}"></view>
+            <text>先生</text>
+          </view>
+          <view class="gender-item {{gender === 'female' ? 'active' : ''}}" bindtap="selectGender" data-gender="female">
+            <view class="gender-circle {{gender === 'female' ? 'checked' : ''}}"></view>
+            <text>女士</text>
+          </view>
+        </view>
+      </view>
+      <text wx:if="{{!name && name !== ''}}" class="error-text">请填写联系人</text>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">联系电话</text>
+      <input class="input" placeholder="请输入手机号" value="{{phone}}" bindinput="bindPhoneInput" />
+      <text wx:if="{{!phone && phone !== ''}}" class="error-text">请输入手机号</text>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">收货地址</text>
+      <view class="address-input-group">
+        <text class="location-icon">◎</text>
+        <input class="input" placeholder="某某栋宿舍楼" value="{{campusAddress}}" bindinput="bindCampusAddressInput" />
+      </view>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">详细地址</text>
+      <input class="input" placeholder="例门牌号，宿舍" value="{{detailAddress}}" bindinput="bindDetailAddressInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="default-switch">
+        <text class="label">设为默认地址</text>
+        <switch checked="{{isDefault}}" bindchange="bindDefaultChange" color="#1a73e8" />
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <button class="save-btn" bindtap="saveAddress">保存</button>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="announcement-header">
+    <text class="announcement-title">关于举办校园文化节的通知</text>
+    <text class="announcement-time">2026-03-10</text>
+  </view>
+  
+  <view class="announcement-content">
+    <text class="content">各学院、各部门：
+
+为丰富校园文化生活，营造浓厚的校园文化氛围，学校决定举办2026年校园文化节。现将有关事项通知如下：
+
+一、活动主题
+青春绽放，文化传承
+
+二、活动时间
+2026年3月15日至3月17日
+
+三、活动地点
+学校主校区
+
+四、活动内容
+1. 文艺演出
+2. 社团展示
+3. 文化展览
+4. 互动体验
+
+五、参与方式
+全体师生均可免费参与，欢迎大家积极报名和观看。
+
+特此通知。
+
+校团委
+2026年3月10日</text>
+  </view>
+</view>

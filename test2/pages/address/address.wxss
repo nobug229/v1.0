@@ -1,0 +1,122 @@
+.container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: white;
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.add-btn {
+  font-size: 32rpx;
+  color: #1a73e8;
+}
+
+.address-list {
+  padding: 20rpx;
+}
+
+.address-item {
+  background-color: white;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.08);
+}
+
+.address-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.address-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+
+.address-gender {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.address-phone {
+  font-size: 30rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.default-tag {
+  font-size: 24rpx;
+  color: #ff8c00;
+  border: 1rpx solid #ff8c00;
+  border-radius: 8rpx;
+  padding: 2rpx 10rpx;
+}
+
+.address-detail {
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.address-campus {
+  font-size: 30rpx;
+  color: #333;
+  display: block;
+}
+
+.address-detail-text {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-top: 8rpx;
+}
+
+.address-actions {
+  display: flex;
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 20rpx;
+}
+
+.action-btn {
+  font-size: 28rpx;
+  color: #1a73e8;
+  margin-right: 40rpx;
+}
+
+.action-btn:last-child {
+  margin-right: 0;
+}
+
+/* 新增地址按钮固定在底部 */
+.add-address-btn {
+  position: fixed;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  height: 80rpx;
+  background-color: #1a73e8;
+  color: white;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(26, 115, 232, 0.3);
+  z-index: 9;
+}

@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="post-header">
+    <text class="post-title">发布帖子</text>
+  </view>
+  
+  <view class="post-form">
+    <view class="form-item">
+      <text class="form-label">选择标签</text>
+      <view class="tag-select">
+        <view class="tag-item {{selectedTag === 'sell' ? 'active' : ''}}" bindtap="selectTag" data-tag="sell">
+          出售
+        </view>
+        <view class="tag-item {{selectedTag === 'lost-found' ? 'active' : ''}}" bindtap="selectTag" data-tag="lost-found">
+          失物招领
+        </view>
+        <view class="tag-item {{selectedTag === 'looking-for' ? 'active' : ''}}" bindtap="selectTag" data-tag="looking-for">
+          寻物
+        </view>
+        <view class="tag-item {{selectedTag === 'campus-chat' ? 'active' : ''}}" bindtap="selectTag" data-tag="campus-chat">
+          校园交流
+        </view>
+      </view>
+      <text wx:if="{{!selectedTag}}" class="error-text">请选择一个标签</text>
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">标题</text>
+      <input class="form-input" placeholder="请输入帖子标题" bindinput="bindTitleInput" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">内容</text>
+      <textarea class="form-textarea" placeholder="请输入帖子内容" bindinput="bindContentInput" />
+    </view>
+    
+    <view class="form-item" wx:if="{{selectedTag === 'sell'}}">
+      <text class="form-label">价格</text>
+      <input class="form-input" placeholder="请输入价格" bindinput="bindPriceInput" type="number" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">图片</text>
+      <view class="image-upload">
+        <view class="upload-btn" bindtap="chooseImage">
+          <text>+</text>
+        </view>
+        <view class="image-preview" wx:for="{{images}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" />
+          <view class="image-remove" bindtap="removeImage" data-index="{{index}}">×</view>
+        </view>
+      </view>
+    </view>
+    
+    <button class="submit-btn" bindtap="submitPost">发布帖子</button>
+  </view>
+</view>

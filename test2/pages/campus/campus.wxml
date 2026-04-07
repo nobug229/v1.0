@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="nav-bar">
+    <view class="nav-item {{activeTab === 'announcement' ? 'active' : ''}}" bindtap="switchTab" data-tab="announcement">公告栏</view>
+    <view class="nav-item {{activeTab === 'club' ? 'active' : ''}}" bindtap="switchTab" data-tab="club">社团动态</view>
+  </view>
+  
+  <view class="announcement-list" wx:if="{{activeTab === 'announcement'}}">
+    <view class="announcement-item" bindtap="goToAnnouncementDetail">
+      <text class="announcement-title">关于举办校园文化节的通知</text>
+      <text class="announcement-time">2026-03-10</text>
+      <text class="announcement-content">为丰富校园文化生活，学校将于本周末举办校园文化节，欢迎广大师生参加。</text>
+    </view>
+    
+    <view class="announcement-item" bindtap="goToAnnouncementDetail">
+      <text class="announcement-title">期末考试安排通知</text>
+      <text class="announcement-time">2026-03-09</text>
+      <text class="announcement-content">期末考试将于下周开始，请同学们做好准备。</text>
+    </view>
+    
+    <view class="announcement-item" bindtap="goToAnnouncementDetail">
+      <text class="announcement-title">奖学金评选结果公示</text>
+      <text class="announcement-time">2026-03-08</text>
+      <text class="announcement-content">2025-2026学年奖学金评选结果已公示，详见附件。</text>
+    </view>
+  </view>
+  
+  <view class="club-list" wx:else>
+    <view class="club-item" bindtap="goToClubDynamicDetail">
+      <image class="club-image" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20club%20activity&image_size=square" mode="aspectFill" />
+      <view class="club-info">
+        <text class="club-title">摄影社举办春季摄影展</text>
+        <text class="club-author">摄影社</text>
+        <text class="club-time">2026-03-10</text>
+        <text class="club-content">摄影社将于本周末举办春季摄影展，展示社员们的优秀作品。</text>
+      </view>
+    </view>
+    
+    <view class="club-item" bindtap="goToClubDynamicDetail">
+      <image class="club-image" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=music%20club%20performance&image_size=square" mode="aspectFill" />
+      <view class="club-info">
+        <text class="club-title">音乐社举办校园音乐会</text>
+        <text class="club-author">音乐社</text>
+        <text class="club-time">2026-03-09</text>
+        <text class="club-content">音乐社将于下周五举办校园音乐会，欢迎大家前来欣赏。</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="post-btn" wx:if="{{activeTab === 'club' && canPost}}" bindtap="goToPostClubDynamic">+
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="filter-section">
+    <view class="filter-title">筛选标签：</view>
+    <view class="filter-tags">
+      <view class="filter-tag {{selectedFilters.includes('sell') ? 'active' : ''}}" bindtap="toggleFilter" data-tag="sell">
+        出售
+      </view>
+      <view class="filter-tag {{selectedFilters.includes('lost-found') ? 'active' : ''}}" bindtap="toggleFilter" data-tag="lost-found">
+        失物招领
+      </view>
+      <view class="filter-tag {{selectedFilters.includes('looking-for') ? 'active' : ''}}" bindtap="toggleFilter" data-tag="looking-for">
+        寻物
+      </view>
+      <view class="filter-tag {{selectedFilters.includes('campus-chat') ? 'active' : ''}}" bindtap="toggleFilter" data-tag="campus-chat">
+        校园交流
+      </view>
+    </view>
+  </view>
+  
+  <view class="search-bar">
+    <input placeholder="搜索帖子" class="search-input" />
+    <button class="search-btn">搜索</button>
+  </view>
+  
+  <view class="post-list">
+    <view class="post-item" wx:for="{{filteredPosts}}" wx:key="id" bindtap="goToPostDetail">
+      <image class="post-image" src="{{item.image}}" mode="aspectFill" />
+      <view class="post-info">
+        <view class="post-tag-label">{{item.tagName}}</view>
+        <text class="post-title">{{item.title}}</text>
+        <text class="post-content">{{item.content}}</text>
+        <view class="post-footer">
+          <text class="post-author">{{item.author}}</text>
+          <text class="post-time">{{item.time}}</text>
+          <text wx:if="{{item.price}}" class="post-price">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{filteredPosts.length === 0}}" class="empty-tip">暂无相关帖子</view>
+  </view>
+  
+  <view class="post-btn" bindtap="goToPost">+
+  </view>
+</view>

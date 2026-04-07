@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="user-info">
+    <view class="avatar">
+      <text>头像</text>
+    </view>
+    <view class="info">
+      <text class="name">{{userInfo ? userInfo.account : '未登录'}}</text>
+      <text class="type">{{userTypeText}}</text>
+    </view>
+    <button wx:if="{{!userInfo}}" class="login-btn" bindtap="goToLogin">登录/注册</button>
+  </view>
+  
+  <view class="menu-section">
+    <view class="menu-item" bindtap="goToOrders">
+      <text class="menu-icon">📋</text>
+      <text class="menu-text">我的订单</text>
+      <text class="menu-arrow">→</text>
+    </view>
+    <view class="menu-item" bindtap="goToAddresses">
+      <text class="menu-icon">📍</text>
+      <text class="menu-text">收货地址</text>
+      <text class="menu-arrow">→</text>
+    </view>
+    <view class="menu-item" bindtap="goToFavorites">
+      <text class="menu-icon">❤️</text>
+      <text class="menu-text">我的收藏</text>
+      <text class="menu-arrow">→</text>
+    </view>
+  </view>
+  
+  <view class="menu-section">
+    <view class="menu-item" bindtap="goToSettings">
+      <text class="menu-icon">⚙️</text>
+      <text class="menu-text">设置</text>
+      <text class="menu-arrow">→</text>
+    </view>
+    <view class="menu-item" bindtap="goToAbout">
+      <text class="menu-icon">ℹ️</text>
+      <text class="menu-text">关于我们</text>
+      <text class="menu-arrow">→</text>
+    </view>
+  </view>
+  
+  <button wx:if="{{userInfo}}" class="logout-btn" bindtap="logout">退出登录</button>
+</view>

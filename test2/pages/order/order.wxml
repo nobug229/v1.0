@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="section">
+    <text class="section-title">收货地址</text>
+    <view class="address-item" bindtap="chooseAddress">
+      <view class="address-icon">📍</view>
+      <view class="address-info">
+        <text class="address-name">{{address ? address.name + ' ' + address.phone : '请选择收货地址'}}</text>
+        <text class="address-detail">{{address ? address.detail : '点击添加或选择地址'}}</text>
+      </view>
+      <view class="address-arrow">→</view>
+    </view>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">订单商品</text>
+    <view class="order-item" wx:for="{{orderItems}}" wx:key="id">
+      <text class="order-name">{{item.name}}</text>
+      <text class="order-count">x{{item.count}}</text>
+      <text class="order-price">¥{{item.price}}</text>
+    </view>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">订单信息</text>
+    <view class="order-info">
+      <text class="info-label">配送方式</text>
+      <text class="info-value">外卖配送</text>
+    </view>
+    <view class="order-info">
+      <text class="info-label">备注</text>
+      <input class="info-input" placeholder="请输入备注信息" />
+    </view>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">价格明细</text>
+    <view class="price-item">
+      <text class="price-label">商品金额</text>
+      <text class="price-value">¥{{totalPrice}}</text>
+    </view>
+    <view class="price-item">
+      <text class="price-label">配送费</text>
+      <text class="price-value">¥5</text>
+    </view>
+    <view class="price-item total">
+      <text class="price-label">合计</text>
+      <text class="price-value total">¥{{totalPrice + 5}}</text>
+    </view>
+  </view>
+  
+  <view class="bottom-bar">
+    <view class="total-price">
+      <text>合计：</text>
+      <text class="price">¥{{totalPrice + 5}}</text>
+    </view>
+    <button class="pay-btn" bindtap="submitOrder">提交订单</button>
+  </view>
+</view>

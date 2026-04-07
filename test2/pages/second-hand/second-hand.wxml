@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="header">
+    <view class="title">校园论坛</view>
+    <view class="filter-btn" bindtap="toggleFilterMenu">
+      筛选标签
+      <view class="arrow {{showFilterMenu ? 'up' : 'down'}}"></view>
+    </view>
+  </view>
+  
+  <!-- 筛选下拉菜单 -->
+  <view class="filter-menu" wx:if="{{showFilterMenu}}">
+    <view class="filter-menu-item {{selectedTag === 'sell' ? 'active' : ''}}" bindtap="selectTag" data-tag="sell">
+      出售
+    </view>
+    <view class="filter-menu-item {{selectedTag === 'lost-found' ? 'active' : ''}}" bindtap="selectTag" data-tag="lost-found">
+      失物招领
+    </view>
+    <view class="filter-menu-item {{selectedTag === 'looking-for' ? 'active' : ''}}" bindtap="selectTag" data-tag="looking-for">
+      寻物
+    </view>
+    <view class="filter-menu-item {{selectedTag === 'campus-chat' ? 'active' : ''}}" bindtap="selectTag" data-tag="campus-chat">
+      校园交流
+    </view>
+    <view class="filter-menu-item {{selectedTag === '' ? 'active' : ''}}" bindtap="selectTag" data-tag="">
+      全部
+    </view>
+  </view>
+  
+  <view class="search-bar">
+    <input placeholder="搜索帖子" class="search-input" />
+    <button class="search-btn">搜索</button>
+  </view>
+  
+  <view class="post-list">
+    <view class="post-item" wx:for="{{filteredPosts}}" wx:key="id" bindtap="goToPostDetail">
+      <image class="post-image" src="{{item.image}}" mode="aspectFill" />
+      <view class="post-info">
+        <view class="post-tag-label">{{item.tagName}}</view>
+        <text class="post-title">{{item.title}}</text>
+        <text class="post-content">{{item.content}}</text>
+        <view class="post-footer">
+          <text class="post-author">{{item.author}}</text>
+          <text class="post-time">{{item.time}}</text>
+          <text wx:if="{{item.price}}" class="post-price">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{filteredPosts.length === 0}}" class="empty-tip">暂无相关帖子</view>
+  </view>
+  
+  <view class="post-btn" bindtap="goToPost">+
+  </view>
+</view>
