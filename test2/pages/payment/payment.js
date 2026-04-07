@@ -34,7 +34,7 @@ Page({
 
       setTimeout(() => {
         wx.navigateTo({
-          url: '/pages/profile/profile'
+          url: '/pages/个人信息/profile'
         });
       }, 1000);
     }, 2000);

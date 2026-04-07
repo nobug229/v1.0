@@ -180,7 +180,7 @@ Page({
     }
     
     wx.navigateTo({
-      url: '/pages/order/order'
+      url: '/pages/订单/order'
     });
   }
 });

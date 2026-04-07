@@ -14,7 +14,7 @@ Page({
     const app = getApp();
     if (!app.getUserInfo()) {
       wx.reLaunch({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
       return false;
     }
@@ -160,7 +160,7 @@ Page({
    */
   goToPost() {
     wx.navigateTo({
-      url: '/pages/post/post'
+      url: '/pages/发帖/post'
     });
   },
 
@@ -169,7 +169,7 @@ Page({
    */
   goToPostDetail() {
     wx.navigateTo({
-      url: '/pages/post-detail/post-detail'
+      url: '/pages/帖子详情/post-detail'
     });
   }
 });

@@ -21,7 +21,7 @@ Page({
    */
   goToLogin() {
     wx.navigateTo({
-      url: '/pages/login/login'
+      url: '/pages/登录/login'
     });
   },
 

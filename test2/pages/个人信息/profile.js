@@ -16,7 +16,7 @@ Page({
     const app = getApp();
     if (!app.getUserInfo()) {
       wx.reLaunch({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
       return false;
     }
@@ -162,7 +162,7 @@ Page({
    */
   goToLogin() {
     wx.navigateTo({
-      url: '/pages/login/login'
+      url: '/pages/登录/login'
     });
   },
 
@@ -182,7 +182,7 @@ Page({
     const userType = app.getUserType();
     if (userType === 2) {
       wx.navigateTo({
-        url: '/pages/merchant-orders/merchant-orders'
+        url: '/pages/商户订单/merchant-orders'
       });
     } else {
       wx.showToast({
@@ -206,7 +206,7 @@ Page({
       return;
     }
     wx.navigateTo({
-      url: '/pages/address/address'
+      url: '/pages/收货地址/address'
     });
   },
 
@@ -224,7 +224,7 @@ Page({
       return;
     }
     wx.navigateTo({
-      url: '/pages/my-shop/my-shop'
+      url: '/pages/我的店铺/my-shop'
     });
   },
 
@@ -245,7 +245,7 @@ Page({
     // 跳转到登录页面
     setTimeout(() => {
       wx.reLaunch({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
     }, 1000);
   },

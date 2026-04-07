@@ -54,7 +54,7 @@ Page({
       return;
     }
     wx.navigateTo({
-      url: '/pages/address-edit/address-edit'
+      url: '/pages/编辑地址/address-edit'
     });
   },
 
@@ -66,7 +66,7 @@ Page({
     const index = e.currentTarget.dataset.index;
     const address = this.data.addresses[index];
     wx.navigateTo({
-      url: `/pages/address-edit/address-edit?id=${address.id}`
+      url: `/pages/编辑地址/address-edit?id=${address.id}`
     });
   },
 

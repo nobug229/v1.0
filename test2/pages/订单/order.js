@@ -77,7 +77,7 @@ Page({
    */
   chooseAddress() {
     wx.navigateTo({
-      url: '/pages/address/address'
+      url: '/pages/收货地址/address'
     });
   },
 
@@ -164,7 +164,7 @@ Page({
         success: (res) => {
           if (res.confirm) {
             wx.navigateTo({
-              url: '/pages/address-edit/address-edit'
+              url: '/pages/编辑地址/address-edit'
             });
           }
         }
@@ -194,7 +194,7 @@ Page({
 
       setTimeout(() => {
         wx.switchTab({
-          url: '/pages/takeaway/takeaway'
+          url: '/pages/校园美食/takeaway'
         });
       }, 1500);
     }, 1000);

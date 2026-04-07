@@ -28,7 +28,7 @@
     
     <text wx:if="{{!userType}}" class="error-text">请选择账号类型</text>
     <button class="btn btn-primary" bindtap="register">注册</button>
-    <navigator class="login-link" url="/pages/login/login">
+    <navigator class="login-link" url="/pages/登录/login">
       <text>已有账号？立即登录</text>
     </navigator>
   </view>

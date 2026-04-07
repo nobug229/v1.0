@@ -19,11 +19,11 @@
   </view>
   
   <view class="merchant-actions">
-    <navigator class="action-item" url="/pages/add-restaurant/add-restaurant">
+    <navigator class="action-item" url="/pages/添加餐厅/add-restaurant">
       <view class="action-icon">🏪</view>
       <text class="action-text">创建餐厅</text>
     </navigator>
-    <navigator class="action-item" url="/pages/add-dish/add-dish">
+    <navigator class="action-item" url="/pages/添加菜品/add-dish">
       <view class="action-icon">🍽️</view>
       <text class="action-text">发布菜品</text>
     </navigator>

@@ -14,7 +14,7 @@ Page({
     const app = getApp();
     if (!app.getUserInfo()) {
       wx.reLaunch({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
       return false;
     }
@@ -126,7 +126,7 @@ Page({
    */
   goToAnnouncementDetail() {
     wx.navigateTo({
-      url: '/pages/announcement/announcement'
+      url: '/pages/公告/announcement'
     });
   },
 
@@ -135,7 +135,7 @@ Page({
    */
   goToClubDynamicDetail() {
     wx.navigateTo({
-      url: '/pages/club-dynamic/club-dynamic'
+      url: '/pages/社团动态/club-dynamic'
     });
   },
 
@@ -144,7 +144,7 @@ Page({
    */
   goToPostClubDynamic() {
     wx.navigateTo({
-      url: '/pages/post/post'
+      url: '/pages/发帖/post'
     });
   }
 });

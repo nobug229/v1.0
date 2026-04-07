@@ -11,7 +11,7 @@ Page({
     const app = getApp();
     if (!app.getUserInfo()) {
       wx.reLaunch({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
       return false;
     }
@@ -91,7 +91,7 @@ Page({
   goToRestaurant(e) {
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/restaurant/restaurant?id=${id}`
+      url: `/pages/餐厅详情/restaurant?id=${id}`
     });
   }
 });

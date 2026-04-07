@@ -97,7 +97,7 @@ Page({
     
     setTimeout(() => {
       wx.redirectTo({
-        url: '/pages/login/login'
+        url: '/pages/登录/login'
       });
     }, 1000);
   }

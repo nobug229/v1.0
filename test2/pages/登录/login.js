@@ -87,7 +87,7 @@ Page({
       
       setTimeout(() => {
         wx.switchTab({
-          url: '/pages/takeaway/takeaway'
+          url: '/pages/校园美食/takeaway'
         });
       }, 1000);
     } 
@@ -104,7 +104,7 @@ Page({
       
       setTimeout(() => {
         wx.switchTab({
-          url: '/pages/takeaway/takeaway'
+          url: '/pages/校园美食/takeaway'
         });
       }, 1000);
     } else {

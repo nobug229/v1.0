@@ -4,22 +4,22 @@
   </view>
   
   <view class="module-grid">
-    <navigator class="module-item" url="/pages/takeaway/takeaway">
+    <navigator class="module-item" url="/pages/校园美食/takeaway">
       <view class="module-icon">🍔</view>
       <text class="module-text">外卖订餐</text>
     </navigator>
     
-    <navigator class="module-item" url="/pages/second-hand/second-hand">
+    <navigator class="module-item" url="/pages/校园论坛/second-hand">
       <view class="module-icon">📦</view>
       <text class="module-text">二手交易</text>
     </navigator>
     
-    <navigator class="module-item" url="/pages/campus/campus">
+    <navigator class="module-item" url="/pages/校园资讯/campus">
       <view class="module-icon">🏫</view>
       <text class="module-text">校园生活</text>
     </navigator>
     
-    <navigator class="module-item" url="/pages/profile/profile">
+    <navigator class="module-item" url="/pages/个人信息/profile">
       <view class="module-icon">👤</view>
       <text class="module-text">个人中心</text>
     </navigator>
