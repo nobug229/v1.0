@@ -38,7 +38,7 @@
   <view class="bottom-nav">
     <view class="nav-item active">
       <view class="nav-icon shop"></view>
-      <text class="nav-text">餐厅管理</text>
+      <text class="nav-text">店铺管理</text>
     </view>
     <view class="nav-item" bindtap="goToProfile">
       <view class="nav-icon profile"></view>
