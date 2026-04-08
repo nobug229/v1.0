@@ -1,25 +1,25 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/index/index",
-    "pages/register/register",
-    "pages/takeaway/takeaway",
-    "pages/restaurant/restaurant",
-    "pages/order/order",
-    "pages/merchant/merchant",
-    "pages/add-restaurant/add-restaurant",
-    "pages/add-dish/add-dish",
-    "pages/second-hand/second-hand",
-    "pages/post/post",
-    "pages/post-detail/post-detail",
-    "pages/campus/campus",
-    "pages/announcement/announcement",
-    "pages/club-dynamic/club-dynamic",
-    "pages/profile/profile",
-    "pages/address/address",
-    "pages/address-edit/address-edit",
-    "pages/merchant-orders/merchant-orders",
-    "pages/my-shop/my-shop"
+    "pages/登录/login",
+    "pages/首页/index",
+    "pages/注册/register",
+    "pages/校园美食/takeaway",
+    "pages/餐厅详情/restaurant",
+    "pages/订单/order",
+    "pages/商户管理/merchant",
+    "pages/添加餐厅/add-restaurant",
+    "pages/添加菜品/add-dish",
+    "pages/校园论坛/second-hand",
+    "pages/发帖/post",
+    "pages/帖子详情/post-detail",
+    "pages/校园资讯/campus",
+    "pages/公告/announcement",
+    "pages/社团动态/club-dynamic",
+    "pages/个人信息/profile",
+    "pages/收货地址/address",
+    "pages/编辑地址/address-edit",
+    "pages/商户订单/merchant-orders",
+    "pages/我的店铺/my-shop"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,19 +30,19 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/takeaway/takeaway",
+        "pagePath": "pages/校园美食/takeaway",
         "text": "校园美食"
       },
       {
-        "pagePath": "pages/campus/campus",
+        "pagePath": "pages/校园资讯/campus",
         "text": "校园资讯"
       },
       {
-        "pagePath": "pages/second-hand/second-hand",
+        "pagePath": "pages/校园论坛/second-hand",
         "text": "校园论坛"
       },
       {
-        "pagePath": "pages/profile/profile",
+        "pagePath": "pages/个人信息/profile",
         "text": "个人信息"
       }
     ]
