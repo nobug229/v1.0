@@ -7,7 +7,6 @@
     </view>
   </view>
   
-  <!-- 筛选下拉菜单 -->
   <view class="filter-menu" wx:if="{{showFilterMenu}}">
     <view class="filter-menu-item {{selectedTag === 'sell' ? 'active' : ''}}" bindtap="selectTag" data-tag="sell">
       出售
@@ -32,10 +31,13 @@
   </view>
   
   <view class="post-list">
-    <view class="post-item" wx:for="{{filteredPosts}}" wx:key="id" bindtap="goToPostDetail">
-      <image class="post-image" src="{{item.image}}" mode="aspectFill" />
-      <view class="post-info">
-        <view class="post-tag-label">{{item.tagName}}</view>
+    <view class="post-item" wx:for="{{filteredPosts}}" wx:key="id">
+      <image class="post-image" src="{{item.image}}" mode="aspectFill" bindtap="goToPostDetail" data-id="{{item.id}}" />
+      <view class="post-info" bindtap="goToPostDetail" data-id="{{item.id}}">
+        <view class="post-header">
+          <view class="post-tag-label">{{item.tagName}}</view>
+          <view wx:if="{{item.isPinned}}" class="pinned-label">置顶</view>
+        </view>
         <text class="post-title">{{item.title}}</text>
         <text class="post-content">{{item.content}}</text>
         <view class="post-footer">
@@ -44,10 +46,15 @@
           <text wx:if="{{item.price}}" class="post-price">¥{{item.price}}</text>
         </view>
       </view>
+      <view wx:if="{{isAdmin}}" class="admin-actions">
+        <button class="admin-btn delete-btn" catchtap="deletePost" data-id="{{item._id || item.id}}">删除</button>
+        <button class="admin-btn pin-btn {{item.isPinned ? 'pinned' : ''}}" catchtap="pinPost" data-id="{{item._id || item.id}}">
+          {{item.isPinned ? '取消置顶' : '置顶'}}
+        </button>
+      </view>
     </view>
     <view wx:if="{{filteredPosts.length === 0}}" class="empty-tip">暂无相关帖子</view>
   </view>
   
-  <view class="post-btn" bindtap="goToPost">+
-  </view>
+  <button class="fab-btn" bindtap="goToPost">发布帖子</button>
 </view>
