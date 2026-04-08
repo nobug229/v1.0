@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="header">
+    <view class="welcome">
+      <text class="welcome-text">欢迎，商家</text>
+      <text class="user-name">{{userInfo ? userInfo.account : ''}}</text>
+    </view>
+  </view>
+
+  <view class="menu-list">
+    <view class="menu-item" bindtap="goToMyShop">
+      <view class="menu-icon shop-icon"></view>
+      <view class="menu-content">
+        <text class="menu-title">我的店铺</text>
+        <text class="menu-desc">管理店铺信息</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="menu-item" bindtap="goToMerchantOrders">
+      <view class="menu-icon order-icon"></view>
+      <view class="menu-content">
+        <text class="menu-title">订单管理</text>
+        <text class="menu-desc">查看和处理订单</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="menu-item" bindtap="goToProfile">
+      <view class="menu-icon profile-icon"></view>
+      <view class="menu-content">
+        <text class="menu-title">个人信息</text>
+        <text class="menu-desc">修改个人资料</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+  </view>
+
+  <view class="bottom-nav">
+    <view class="nav-item active">
+      <view class="nav-icon shop"></view>
+      <text class="nav-text">餐厅管理</text>
+    </view>
+    <view class="nav-item" bindtap="goToProfile">
+      <view class="nav-icon profile"></view>
+      <text class="nav-text">个人信息</text>
+    </view>
+  </view>
+</view>

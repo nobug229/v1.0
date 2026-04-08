@@ -75,9 +75,15 @@ Page({
       });
       
       setTimeout(() => {
-        wx.switchTab({
-          url: '/pages/校园美食/takeaway'
-        });
+        if (accountInfo.userType === 2) {
+          wx.reLaunch({
+            url: '/pages/商家首页/merchant-home'
+          });
+        } else {
+          wx.switchTab({
+            url: '/pages/校园美食/takeaway'
+          });
+        }
       }, 1000);
     } else {
       wx.showToast({

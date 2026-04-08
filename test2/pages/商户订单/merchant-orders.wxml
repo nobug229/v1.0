@@ -28,4 +28,15 @@
       <text>暂无订单</text>
     </view>
   </view>
+
+  <view class="bottom-nav">
+    <view class="nav-item" bindtap="goToMerchantHome">
+      <view class="nav-icon shop"></view>
+      <text class="nav-text">餐厅管理</text>
+    </view>
+    <view class="nav-item active">
+      <view class="nav-icon profile"></view>
+      <text class="nav-text">个人信息</text>
+    </view>
+  </view>
 </view>

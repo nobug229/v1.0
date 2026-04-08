@@ -5,23 +5,15 @@ Page({
     editingName: ''
   },
 
-  /**
-   * 页面加载时执行
-   */
   onLoad() {
     this.loadShop();
   },
 
-  /**
-   * 页面显示时执行
-   */
   onShow() {
     this.loadShop();
+    wx.hideTabBar();
   },
 
-  /**
-   * 从本地存储加载店铺信息
-   */
   loadShop() {
     try {
       const shop = wx.getStorageSync('myShop') || null;
@@ -33,9 +25,6 @@ Page({
     }
   },
 
-  /**
-   * 保存店铺信息到本地存储
-   */
   saveShop(shop) {
     try {
       wx.setStorageSync('myShop', shop);
@@ -44,9 +33,6 @@ Page({
     }
   },
 
-  /**
-   * 创建店铺
-   */
   createShop() {
     wx.showModal({
       title: '创建店铺',
@@ -72,9 +58,6 @@ Page({
     });
   },
 
-  /**
-   * 开始编辑店铺名称
-   */
   startEditName() {
     this.setData({
       isEditingName: true,
@@ -82,9 +65,6 @@ Page({
     });
   },
 
-  /**
-   * 取消编辑店铺名称
-   */
   cancelEditName() {
     this.setData({
       isEditingName: false,
@@ -92,18 +72,12 @@ Page({
     });
   },
 
-  /**
-   * 绑定店铺名称输入
-   */
   bindNameInput(e) {
     this.setData({
       editingName: e.detail.value
     });
   },
 
-  /**
-   * 保存店铺名称
-   */
   saveName() {
     const editingName = this.data.editingName.trim();
     
@@ -131,9 +105,6 @@ Page({
     });
   },
 
-  /**
-   * 删除店铺
-   */
   deleteShop() {
     wx.showModal({
       title: '确认删除',
@@ -150,6 +121,18 @@ Page({
           });
         }
       }
+    });
+  },
+
+  goToMerchantHome() {
+    wx.reLaunch({
+      url: '/pages/商家首页/merchant-home'
+    });
+  },
+
+  goToProfile() {
+    wx.navigateTo({
+      url: '/pages/个人信息/profile'
     });
   }
 });

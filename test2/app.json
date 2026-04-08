@@ -19,7 +19,8 @@
     "pages/收货地址/address",
     "pages/编辑地址/address-edit",
     "pages/商户订单/merchant-orders",
-    "pages/我的店铺/my-shop"
+    "pages/我的店铺/my-shop",
+    "pages/商家首页/merchant-home"
   ],
   "window": {
     "backgroundTextStyle": "light",

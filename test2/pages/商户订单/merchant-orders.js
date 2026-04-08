@@ -3,23 +3,15 @@ Page({
     orders: []
   },
 
-  /**
-   * 页面加载时执行
-   */
   onLoad() {
     this.loadOrders();
   },
 
-  /**
-   * 页面显示时执行
-   */
   onShow() {
     this.loadOrders();
+    wx.hideTabBar();
   },
 
-  /**
-   * 从本地存储加载订单
-   */
   loadOrders() {
     try {
       let orders = wx.getStorageSync('merchantOrders') || [];
@@ -42,9 +34,6 @@ Page({
     }
   },
 
-  /**
-   * 保存订单到本地存储
-   */
   saveOrders(orders) {
     try {
       wx.setStorageSync('merchantOrders', orders);
@@ -53,9 +42,6 @@ Page({
     }
   },
 
-  /**
-   * 格式化日期
-   */
   formatDate(timestamp) {
     const date = new Date(timestamp);
     const year = date.getFullYear();
@@ -64,5 +50,17 @@ Page({
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
     return `${year}-${month}-${day} ${hours}:${minutes}`;
+  },
+
+  goToMerchantHome() {
+    wx.reLaunch({
+      url: '/pages/商家首页/merchant-home'
+    });
+  },
+
+  goToProfile() {
+    wx.navigateTo({
+      url: '/pages/个人信息/profile'
+    });
   }
 });
