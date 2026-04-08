@@ -25,6 +25,10 @@ const PermissionManager = {
   },
 
   canEditPost(postAuthorId) {
+    if (!postAuthorId || typeof postAuthorId !== 'string') {
+      return false;
+    }
+    
     const app = getApp();
     const userInfo = app.getUserInfo();
     if (!userInfo) return false;
