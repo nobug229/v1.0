@@ -51,7 +51,7 @@ Page({
   },
 
   goToProfile() {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/个人信息/profile'
     });
   }

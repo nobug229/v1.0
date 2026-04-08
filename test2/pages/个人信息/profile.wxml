@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container {{isMerchant ? 'merchant-container' : ''}}">
   <view class="user-info">
     <view class="avatar" bindtap="chooseAvatar">
       <image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" class="avatar-img"></image>
@@ -39,4 +39,15 @@
   </view>
   
   <button wx:if="{{userInfo}}" class="logout-btn" bindtap="logout">退出登录</button>
+
+  <view wx:if="{{isMerchant}}" class="bottom-nav">
+    <view class="nav-item" bindtap="goToMerchantHome">
+      <view class="nav-icon shop"></view>
+      <text class="nav-text">店铺管理</text>
+    </view>
+    <view class="nav-item active">
+      <view class="nav-icon profile"></view>
+      <text class="nav-text">个人信息</text>
+    </view>
+  </view>
 </view>

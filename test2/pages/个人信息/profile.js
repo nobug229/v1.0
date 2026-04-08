@@ -1,3 +1,5 @@
+const PermissionManager = require('../../utils/permission-manager.js');
+
 Page({
   data: {
     userInfo: null,
@@ -5,7 +7,8 @@ Page({
     userTypeText: '未登录',
     avatarUrl: '',
     isEditingName: false,
-    editingName: ''
+    editingName: '',
+    isMerchant: false
   },
 
   checkLogin() {
@@ -28,6 +31,18 @@ Page({
   onShow() {
     if (!this.checkLogin()) return;
     this.loadUserInfo();
+    this.checkMerchantStatus();
+  },
+
+  checkMerchantStatus() {
+    const isMerchant = PermissionManager.isMerchant();
+    this.setData({
+      isMerchant: isMerchant
+    });
+    
+    if (isMerchant) {
+      wx.hideTabBar();
+    }
   },
 
   loadUserInfo() {
@@ -246,5 +261,11 @@ Page({
         icon: 'success'
       });
     }
+  },
+
+  goToMerchantHome() {
+    wx.reLaunch({
+      url: '/pages/商家首页/merchant-home'
+    });
   }
 });
