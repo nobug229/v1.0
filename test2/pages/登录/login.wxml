@@ -16,21 +16,22 @@
         </view>
         <view class="type-item {{userType === 2 ? 'active' : ''}}" bindtap="selectUserType" data-type="2">
           <view class="type-circle"></view>
-          <text>商户账号</text>
+          <text>商家账号</text>
         </view>
         <view class="type-item {{userType === 3 ? 'active' : ''}}" bindtap="selectUserType" data-type="3">
-          <view class="type-circle"></view>
-          <text>社团账号</text>
-        </view>
-        <view class="type-item {{userType === 4 ? 'active' : ''}}" bindtap="selectUserType" data-type="4">
           <view class="type-circle"></view>
           <text>管理员账号</text>
         </view>
       </view>
     </view>
     
-  
-
+    <view class="test-account">
+      <text style="font-size: 24rpx; color: #666;">测试账号：</text>
+      <text style="font-size: 24rpx; color: #666; display: block;">学生：student / 123456</text>
+      <text style="font-size: 24rpx; color: #666; display: block;">商家：merchant / 123456</text>
+      <text style="font-size: 24rpx; color: #666; display: block;">管理员：admin / 123456</text>
+    </view>
+    
     <button class="btn btn-primary" bindtap="login">登录</button>
     <navigator class="register-link" url="/pages/注册/register">
       <text>还没有账号？立即注册</text>

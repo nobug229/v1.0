@@ -1,17 +1,13 @@
 Page({
   data: {
-    userInfo: null, // 用户信息
-    userType: null, // 用户类型
-    userTypeText: '未登录', // 用户类型文本
-    avatarUrl: '', // 头像URL
-    isEditingName: false, // 是否正在编辑账号名称
-    editingName: '' // 正在编辑的账号名称
+    userInfo: null,
+    userType: null,
+    userTypeText: '未登录',
+    avatarUrl: '',
+    isEditingName: false,
+    editingName: ''
   },
 
-  /**
-   * 检查登录状态
-   * 未登录则跳转到登录页
-   */
   checkLogin() {
     const app = getApp();
     if (!app.getUserInfo()) {
@@ -23,29 +19,17 @@ Page({
     return true;
   },
 
-  /**
-   * 页面加载时触发
-   * 检查登录状态，加载用户信息和头像
-   */
   onLoad() {
     if (!this.checkLogin()) return;
     this.loadUserInfo();
     this.loadAvatar();
   },
 
-  /**
-   * 页面显示时触发
-   * 检查登录状态，重新加载用户信息，确保数据最新
-   */
   onShow() {
     if (!this.checkLogin()) return;
     this.loadUserInfo();
   },
 
-  /**
-   * 加载用户信息
-   * 从全局应用获取用户信息和用户类型，并更新页面显示
-   */
   loadUserInfo() {
     const app = getApp();
     const userInfo = app.getUserInfo();
@@ -63,12 +47,9 @@ Page({
           userTypeText = '学生账号';
           break;
         case 2:
-          userTypeText = '商户账号';
+          userTypeText = '商家账号';
           break;
         case 3:
-          userTypeText = '社团账号';
-          break;
-        case 4:
           userTypeText = '管理员账号';
           break;
       }
@@ -82,10 +63,6 @@ Page({
     }
   },
 
-  /**
-   * 加载头像
-   * 从本地存储中获取头像
-   */
   loadAvatar() {
     try {
       const avatarUrl = wx.getStorageSync('avatarUrl');
@@ -99,17 +76,12 @@ Page({
     }
   },
 
-  /**
-   * 选择头像
-   * 从相册或摄像头选择图片作为头像，并本地存储
-   */
   chooseAvatar() {
     const that = this;
     wx.showActionSheet({
       itemList: ['从相册选择', '拍照'],
       success(res) {
         if (res.tapIndex === 0) {
-          // 从相册选择
           wx.chooseImage({
             count: 1,
             sizeType: ['compressed'],
@@ -119,7 +91,6 @@ Page({
             }
           });
         } else if (res.tapIndex === 1) {
-          // 拍照
           wx.chooseImage({
             count: 1,
             sizeType: ['compressed'],
@@ -133,11 +104,6 @@ Page({
     });
   },
 
-  /**
-   * 保存头像
-   * 将头像保存到本地存储
-   * @param {string} avatarUrl - 头像临时路径
-   */
   saveAvatar(avatarUrl) {
     const that = this;
     try {
@@ -157,19 +123,12 @@ Page({
     }
   },
 
-  /**
-   * 跳转到登录页面
-   */
   goToLogin() {
     wx.navigateTo({
       url: '/pages/登录/login'
     });
   },
 
-  /**
-   * 跳转到订单页面
-   * 检查用户是否已登录，未登录则提示登录
-   */
   goToOrders() {
     const app = getApp();
     if (!app.getUserInfo()) {
@@ -192,10 +151,6 @@ Page({
     }
   },
 
-  /**
-   * 跳转到地址管理页面
-   * 检查用户是否已登录，未登录则提示登录
-   */
   goToAddresses() {
     const app = getApp();
     if (!app.getUserInfo()) {
@@ -210,10 +165,6 @@ Page({
     });
   },
 
-  /**
-   * 跳转到我的店铺页面
-   * 检查用户是否已登录，未登录则提示登录
-   */
   goToMyShop() {
     const app = getApp();
     if (!app.getUserInfo()) {
@@ -228,10 +179,6 @@ Page({
     });
   },
 
-  /**
-   * 退出登录
-   * 清除用户信息和用户类型，并跳转到登录页面
-   */
   logout() {
     const app = getApp();
     app.setUserInfo(null);
@@ -242,7 +189,6 @@ Page({
       icon: 'success'
     });
     
-    // 跳转到登录页面
     setTimeout(() => {
       wx.reLaunch({
         url: '/pages/登录/login'
@@ -250,9 +196,6 @@ Page({
     }, 1000);
   },
 
-  /**
-   * 开始编辑账号名称
-   */
   startEditName() {
     const userInfo = this.data.userInfo;
     this.setData({
@@ -261,9 +204,6 @@ Page({
     });
   },
 
-  /**
-   * 取消编辑账号名称
-   */
   cancelEditName() {
     this.setData({
       isEditingName: false,
@@ -271,19 +211,12 @@ Page({
     });
   },
 
-  /**
-   * 绑定账号名称输入
-   * @param {Object} e - 输入事件对象
-   */
   bindNameInput(e) {
     this.setData({
       editingName: e.detail.value
     });
   },
 
-  /**
-   * 保存账号名称
-   */
   saveName() {
     const editingName = this.data.editingName.trim();
     

@@ -15,12 +15,9 @@
           学生账号
         </view>
         <view class="tag-item {{userType === 2 ? 'active' : ''}}" bindtap="selectUserType" data-type="2">
-          商户账号
+          商家账号
         </view>
         <view class="tag-item {{userType === 3 ? 'active' : ''}}" bindtap="selectUserType" data-type="3">
-          社团账号
-        </view>
-        <view class="tag-item {{userType === 4 ? 'active' : ''}}" bindtap="selectUserType" data-type="4">
           管理员账号
         </view>
       </view>
