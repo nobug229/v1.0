@@ -37,15 +37,15 @@ const PermissionManager = {
   },
 
   canManageRestaurant() {
-    return this.isMerchant() || this.isAdmin();
+    return this.isMerchant();
   },
 
   canViewAllOrders() {
-    return this.isAdmin();
+    return false;
   },
 
   canManageUsers() {
-    return this.isAdmin();
+    return false;
   },
 
   checkPermission(permission) {
